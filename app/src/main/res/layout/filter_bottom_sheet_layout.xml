@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/filter_by"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/closeSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="550dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:listitem="@layout/recycler_view_bottom_sheet_filter_layout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/testingLayout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recyclerViewFilter"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <include
+                android:id="@+id/zero"
+                layout="@layout/layout_0" />
+
+            <include
+                android:id="@+id/one"
+                layout="@layout/layout_1"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/two"
+                layout="@layout/layout_2"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/three"
+                layout="@layout/layout_3"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/four"
+                layout="@layout/layout_4"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/five"
+                layout="@layout/layout_5"
+                android:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_Apply"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:backgroundTint="#1fa9e5"
+            android:text="@string/apply"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewFilter"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.rounded"
+            tools:targetApi="lollipop" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

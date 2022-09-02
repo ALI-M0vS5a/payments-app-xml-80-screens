@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main_graph"
+    app:startDestination="@id/onBoardingFragment">
+
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.montypays.authentication.presentation.onboard.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding">
+        <action
+            android:id="@+id/action_onBoardingFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.montypays.authentication.presentation.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+
+        <argument
+            android:name="selecedItem"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.montypays.authentication.presentation.login.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_termsConditionsFragment2"
+            app:destination="@id/termsConditionsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.montypays.authentication.presentation.forgot.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_termsConditionsFragment2"
+            app:destination="@id/termsConditionsFragment2" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_resetPasswordScreen"
+            app:destination="@id/resetPasswordScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsConditionsFragment2"
+        android:name="com.example.montypays.settings.presentation.terms.TermsConditionsFragment"
+        android:label="fragment_terms_conditions"
+        tools:layout="@layout/fragment_terms_conditions" />
+    <fragment
+        android:id="@+id/resetPasswordScreen"
+        android:name="com.example.montypays.dialogs.ResetPasswordScreen"
+        android:label="ResetPasswordScreen" />
+
+</navigation>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_home_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.montypays.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_extendedDetailsFragment"
+            app:destination="@id/extendedDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_generateQRCodeFragment"
+            app:destination="@id/generateQRCodeFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_up" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.montypays.home.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_settingsFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_termsConditionsFragment"
+            app:destination="@id/termsConditionsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_shareSettingsFragment"
+            app:destination="@id/shareSettingsFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.montypays.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.montypays.settings.presentation.report.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/termsConditionsFragment"
+        android:name="com.example.montypays.settings.presentation.terms.TermsConditionsFragment"
+        android:label="fragment_terms_conditions"
+        tools:layout="@layout/fragment_terms_conditions" />
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.example.montypays.settings.presentation.account.MyAccountFragment"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account" >
+        <action
+            android:id="@+id/action_myAccountFragment_to_deleteFragment"
+            app:destination="@id/deleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteFragment"
+        android:name="com.example.montypays.settings.presentation.delete.DeleteFragment"
+        android:label="fragment_delete"
+        tools:layout="@layout/fragment_delete" />
+    <fragment
+        android:id="@+id/extendedDetailsFragment"
+        android:name="com.example.montypays.home.ExtendedDetailsFragment"
+        android:label="fragment_extended_details"
+        tools:layout="@layout/fragment_extended_details" />
+    <fragment
+        android:id="@+id/shareSettingsFragment"
+        android:name="com.example.montypays.settings.presentation.share.ShareSettingsFragment"
+        android:label="ShareSettingsFragment" >
+        <action
+            android:id="@+id/action_shareSettingsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateQRCodeFragment"
+        android:name="com.example.montypays.home.GenerateQRCodeFragment"
+        android:label="GenerateQRCodeFragment" >
+        <argument
+            android:name="amount"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

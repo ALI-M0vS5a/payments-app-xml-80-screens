@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#242247</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo__1_</item>
+        <item name="windowSplashScreenIconBackgroundColor">#242247</item>
+        <item name="postSplashScreenTheme">@style/Theme.MontyPays</item>
+    </style>
+</resources>

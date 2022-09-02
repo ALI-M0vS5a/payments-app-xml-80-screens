@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "315769308841",
+    "project_id": "montypays",
+    "storage_bucket": "montypays.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315769308841:android:4ed161d955b26f590a0bb8",
+        "android_client_info": {
+          "package_name": "com.example.montypays"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315769308841-pp8m7h83lrqrh89vcp3cdberareoaor9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbVzwuEaVLFYMh4OJw66Vg64sGABOqT8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315769308841-pp8m7h83lrqrh89vcp3cdberareoaor9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
